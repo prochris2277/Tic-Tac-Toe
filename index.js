@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tiles = Array.from(document.querySelectorAll(".tile"));
     const playerDisplay = document.querySelector(".display-player");
-    const resetButton = document.getElementById("reset");
+    const restartButton = document.getElementById("restartBtn");
     const announcer = document.querySelector(".announcer");
 
     let board = ["", "", "", "", "", "", "", "", ""];
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 }; 
 
-    const resetBoard = () => {
+    const restartBoard = () => {
         board = ["", "", "", "", "", "", "", "", ""];
         isGameActive = true;
         announcer.classList.add("hide");
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.addEventListener("click", () => userAction(tile, index));
     });
 
-    resetButton.addEventListener("click", resetBoard);
+    restartButton.addEventListener("click", restartBoard);
 });
 
  
